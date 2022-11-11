@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { useNavigate } from "react-router-dom";
 import { ADD_POST } from '../../utils/mutations';
 import { QUERY_POSTS, QUERY_ME } from '../../utils/queries';
 import './PostForm.css';
 import PostOpts from './PostOpts';
 import { Form, Container, Col } from 'react-bootstrap';
+import Rules from './Rules';
 
 const PostForm = (props) => {
-
+  const navigate = useNavigate();
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredText, setEnteredText] = useState('');
 
@@ -59,8 +61,8 @@ const PostForm = (props) => {
 //   }
 
   return (
-    <Container className="wrapper">
-        <Col xs={7}>
+    <Container className="wrapperPost">
+        <Col xs={7} className="formInput">
 		<Form onSubmit={addPostHandler} >
             
 			<PostOpts formType={props.formType} onSetFormType={props.onSetFormType}/>
@@ -80,11 +82,16 @@ const PostForm = (props) => {
 				value={enteredText}
 				onChange={textChangeHandler}
 			/>
-			<button type="submit" className="submit">Submit</button> 
+			<button 
+            type="submit"  
+            onClick={(e) => {
+              navigate("/");
+            }
+        } className="submit">Submit</button> 
             
     </Form>
     </Col>
-    <Col xs lg="2">Rules</Col>
+    <Col md={{ span: 4, offset: 1 }} className="rules"><Rules /></Col>
     </Container>
   );
 }
