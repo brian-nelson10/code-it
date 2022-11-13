@@ -12,6 +12,10 @@
 }
 
 .social Button:hover{
-  background-color: green;
-  color: yellow
+  background-color: #b2b4b2;
+  color: #18332f;
+}
+
+Button {
+  background-color: #18332f;
 }
