@@ -23,3 +23,34 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_POST = gql`
+  mutation addPost($enteredText: String!, $enteredTitle: String!) {
+    addPost(enteredText: $enteredText, enteredTitle: $enteredTitle) {
+      _id
+      enteredText
+      enteredTitle
+      createdAt
+      username
+      commentCount
+      comments {
+        _id
+      }
+    }
+  }
+`;
+
+export const ADD_REPLY = gql`
+  mutation addReaction($commentId: ID!, $reactionBody: String!) {
+    addReaction(commentId: $commentId, reactionBody: $reactionBody) {
+      _id
+      reactionCount
+      reactions {
+        _id
+        reactionBody
+        createdAt
+        username
+      }
+    }
+  }
+`;
