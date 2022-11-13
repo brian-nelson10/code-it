@@ -1,26 +1,18 @@
 .sideBar {
-   
     width: fit-content;
     overflow-y: scroll;
     position: sticky;
- 
+    background-color: #b2b4b2;
+    border-radius: 15px;
+    padding-top: 15px;
+    box-shadow: 0px 0px 16px -7px rgba(0, 0, 0, 1);
   }
+
 .sideContainer {
   padding-top: 30px;
   padding-left: 30px;
-  background-color: #b2b4b2;
 }
-  
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(179, 179, 179);
-  }
-  
+
   .sidebarWrapper {
     padding: 20px;
   }
@@ -50,7 +42,7 @@
     width: 150px;
     border: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     font-weight: 500;
     background-color: #789f90;
     color: #183325;
