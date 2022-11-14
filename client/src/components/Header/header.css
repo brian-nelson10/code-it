@@ -7,14 +7,3 @@
     font-family: 'Cairo Play', cursive;
   }
   
-
-.signBtn:hover {
-  background-color: #18332f;
-}
-  
-.logBtn:hover {
-  color: #f9f7f4;
-  background-color: #f9f7f4;
-  border-color: #f9f7f4;
-}
-

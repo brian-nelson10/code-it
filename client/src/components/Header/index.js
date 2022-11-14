@@ -59,7 +59,7 @@ function Header() {
 
     return (
         <>
-            <Navbar bg="white" expand="lg" sticky="top" style={{ boxShadow: "0px 8px 6px -7px #999" }}>
+            <Navbar className="colorG" expand="lg" sticky="top" style={{ boxShadow: "0px 8px 6px -7px #999" }}>
                 <Container fluid style={{ padding: "0px 125px 0px 5px" }}>
 
 

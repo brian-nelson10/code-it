@@ -26,6 +26,7 @@ Button {
   background-color: #789f90 !important;
   color:#18332f !important;
   border-color: #18332f !important;
+  font-weight: 500 !important;
 }
 
 Button:hover {
