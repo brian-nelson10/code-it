@@ -1,6 +1,7 @@
 .ruleCard{
     width: 19rem;
-
+    background-color: #b2b4b2 !important;
+    color: #18332f !important;
 }
 
 .code {
@@ -12,6 +13,7 @@
     font-size: large;
     font-weight: 600;
     padding-bottom: 10px;
+    color: #18332f !important;
 }
 
 .bot {
