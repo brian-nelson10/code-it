@@ -20,7 +20,7 @@ function ProfileBar() {
         // <div style={{ backgroundColor: '#eee' }}>
             <Container className="profileContainer">
                 <Row className="profileBar">
-                        <Card style={{ borderRadius: '15px' }}>
+                        <Card className="colorG" style={{ borderRadius: '15px' }}>
                             <Card.Body className="text-center">
                                 <div className="mt-3 mb-4">
                                     <Card.Img src={ProfileBot}
