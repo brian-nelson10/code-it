@@ -41,7 +41,6 @@ export const ADD_POST = gql`
       
       createdAt
       username
-      commentCount
       comments {
         _id
       }
@@ -50,10 +49,9 @@ export const ADD_POST = gql`
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($commentId: ID!, $commentBody: String!) {
+  mutation addComment($commentId: ID, $commentBody: String!) {
     addComment(commentId: $commentId, commentBody: $commentBody) {
       _id
-      commentCount
       comments {
         _id
         commentBody
@@ -70,10 +68,8 @@ export const REMOVE_POST = gql `
       _id
       enteredText
       enteredTitle
-     
       createdAt
       username
-      commentCount
       comments {
         _id
       }
