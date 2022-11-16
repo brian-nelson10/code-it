@@ -3,9 +3,9 @@
         "enteredText": "",
         "enteredTitle": "",
         "username": "",
-        "reactions": [
+        "comments": [
             {
-                "reactionBody": "",
+                "commentBody": "",
                 "username": ""
             }
         ]

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from '../../utils/mutations';
 
-const CommentForm = ({ postId }) => {
+const CommentForm = ({ commentId }) => {
   const [commentBody, setBody] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -22,7 +22,7 @@ const CommentForm = ({ postId }) => {
     event.preventDefault();
     try {
       await addComment({
-        variables: { commentBody, postId },
+        variables: { commentBody, commentId },
       });
     } catch (e) {
       console.error(e);

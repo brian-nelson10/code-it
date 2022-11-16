@@ -1,11 +1,9 @@
 import "../Feed/feed.css";
 import React from 'react';
-import { useQuery } from "@apollo/client";
-import { Link, useParams } from "react-router-dom";
-//import Auth from '../utils/auth';
+import { Link } from "react-router-dom";
+import Auth from '../../utils/auth';
 import AddPost from "../../components/AddPost";
 import DeletePost from "../../components/DeletePost";
-import { QUERY_POSTS } from "../../utils/queries";
 import { Card, Stack, Col, Row, Dropdown, Container, Button } from 'react-bootstrap';
 import { ThreeDots, Person, PencilSquare, Eyeglasses, ChatSquareHeart, Gift, Share, CloudDownload } from 'react-bootstrap-icons';
 import Bot from '../../assets/images/bot.png'
@@ -75,7 +73,7 @@ const Feed = ({ posts }) => {
                               <ThreeDots />
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
-                              {/* <Dropdown.Item href="#/action-1"><Stack direction="horizontal"> <DeletePost _id={data.posts._id} />Delete Post</Stack></Dropdown.Item> */}
+                              <Dropdown.Item href="#/action-1"><Stack direction="horizontal">{Auth.loggedIn() && <DeletePost postId={post._id} />}Delete Post</Stack></Dropdown.Item>
                               <Dropdown.Item href="#/action-2"><Button type="submit" variant="warning" className="text-center"><PencilSquare/></Button>Edit Post</Dropdown.Item>
                               <Dropdown.Item href="#/action-3"><Link
                                 to={`/profile/${post.username}`}
