@@ -8,13 +8,13 @@ import "../TopComCard/topcomcard.css"
 function TopComCard() {
     const navigate = useNavigate();
     return (
-        <Card style={{ width: '17rem', paddingTop: "1px", paddingBottom: "1px"}}>
+        <Card style={{ width: '17rem', paddingTop: "1px", paddingBottom: "1px", backgroundColor: "#b2b4b2"}}>
             <Card.Img style={{ height: '20%', opacity: '88%' }} src={Space} />
             <Card.ImgOverlay>
                 <div className='text-center' style={{ padding: "30px", fontWeight: 900, fontSize: "110%", color: "whitesmoke" }}>Top Coding Communities</div>
             </Card.ImgOverlay>
 
-            <ListGroup className="list-group-flush">
+            <ListGroup className="list-group-flush liststyle">
                 <ListGroup.Item
                 ><Row>
                     <Col style={{fontWeight: 600}}>c/react</Col>
