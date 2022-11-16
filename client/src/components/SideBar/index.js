@@ -59,7 +59,6 @@ function Sidebar() {
           </li>
         </ul>
         <button className="sidebarButton">Edit Shortcuts</button>
-        <hr className="sidebarHr" />
         {/* <ul className="sidebarFriendList">
           {Users.map((u) => (
             <CloseFriend key={u.id} user={u} />

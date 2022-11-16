@@ -15,7 +15,7 @@ const AddPost = (props) => {
   return (
     <>
     <Container fluid="md" className="post">
-      <Row className="">
+      <Row>
         <Col md="auto gy-3">
         <Stack direction="horizontal" gap={4}>
           <div className="botWrapper">
