@@ -1,5 +1,8 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+// import { useQuery } from "@apollo/client";
+// import { QUERY_ME, QUERY_USER } from '../../utils/queries';
+// import { Link, useParams } from "react-router-dom";
 import {
     Container,
     Row,
@@ -11,34 +14,47 @@ import { Slack, Github, Linkedin } from 'react-bootstrap-icons';
 import ProfileBot from "../../assets/images/customer-support-bot.png"
 import '../ProfileBar/profilebar.css'
 
+
+
+
 function ProfileBar() {
+
+
+    // const { username: userParam } = useParams();
+    // const user = data?.me || {};
+    // const { data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    //     variables: { username: userParam },
+    //   });
+    // var user = JSON.parse(localStorage.getItem('user'));
 
     const navigate = useNavigate();
 
     return (
 
         // <div style={{ backgroundColor: '#eee' }}>
-            <Container className="profileContainer">
+            <Container className="profileContainerBar">
                 <Row className="profileBar">
-                        <Card className="colorG" style={{ borderRadius: '15px' }}>
+                        <Card className="colorG" style={{ borderRadius: '25px',  border: '3px', borderStyle: 'solid' }}>
                             <Card.Body className="text-center">
+                                
                                 <div className="mt-3 mb-4">
                                     <Card.Img src={ProfileBot}
-                                        className="rounded-circle" style={{ width: '100px' }} />
+                                        className="rounded-circle" style={{ width: '120px', backgroundColor: 'chocolate' }} />
                                 </div>
+                               
                                 <Card.Title tag="h4">B Nel</Card.Title>
                                 <Card.Text className="text-muted mb-4">
-                                    @Programmer <span className="mx-2">|</span> <a href="#!">github.com</a>
+                                    @Programmer <span className="mx-2">|</span> <a href="https://github.com/">github.com</a>
                                 </Card.Text>
                                 <div className="mb-4 pb-2">
                                 <Stack direction="horizontal" gap={3}>
-                                    <Button>
+                                    <Button href="https://github.com/">
                                         <Github />
                                     </Button>
-                                    <Button>
+                                    <Button href="https://slack.com/workspace-signin">
                                         <Slack />
                                     </Button>
-                                    <Button>
+                                    <Button href="https://www.linkedin.com/">
                                         <Linkedin />
                                     </Button>
                                     </Stack>
@@ -66,7 +82,7 @@ function ProfileBar() {
                             </Card.Body>
                         </Card>
                 </Row>
-                <hr></hr>
+               
             </Container>
             
         // </div>

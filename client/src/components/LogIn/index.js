@@ -27,7 +27,7 @@ const handleFormSubmit = async event => {
       variables: { ...formState }
     });
 
-    Auth.login(data.addUser.token);
+    Auth.login(data.login.token);
   } catch (e) {
     console.error(e);
   }
@@ -68,6 +68,7 @@ const handleFormSubmit = async event => {
       </div>
     </main>
   );
+  
 };
 
 export default Login;

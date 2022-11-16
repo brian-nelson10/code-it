@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../Header/header.css'
 import { Link } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
@@ -87,12 +88,18 @@ function Header() {
 
                         
                             {Auth.loggedIn() ? (
-                                <>
-                                    <Link to="/profile">My Profile</Link>
+                               
+                                <Stack direction="horizontal" gap={5}>
+                                    <Link to="/profile">
+                                    <button type="button" className="myProfileBtn">
+                                        Profile
+                                    </button>
+                                    </Link>
                                     <a href="/" onClick={logout}>
-                                        <Button variant="outline-primary" size="sm" className="signBtn">Logout</Button>
+                                        <button  className="logoutBtn">Logout</button>
                                     </a>
-                                </>
+                                    </Stack>
+                               
                             ) : (
                             
                             <Stack direction="horizontal" gap={5}>

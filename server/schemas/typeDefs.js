@@ -1,5 +1,11 @@
 const { gql } = require('apollo-server-express');
 
+    // type File {
+    //     filename: String
+    //     mimetype: String
+    //     enconding: String
+    // }
+
 const typeDefs = gql `
     type User {
         _id: ID
@@ -12,6 +18,7 @@ const typeDefs = gql `
         _id: ID
         enteredText: String
         enteredTitle: String
+       
         createdAt: String
         username: String
         commentCount: Int
@@ -43,6 +50,7 @@ const typeDefs = gql `
         addComment(postId: ID!, commentBody: String!): Post
         addUser(username: String!, email: String!, password: String!): Auth
         addPost(enteredText: String!, enteredTitle: String!): Post
+        removePost(postId: ID!): User
     }
 `;
 

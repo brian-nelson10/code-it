@@ -1,18 +1,19 @@
 .profileBar {
-    height: 100%;
+    /* height: 30%; */
     width: fit-content;
     overflow-y: scroll;
     position: sticky;
-    top: 50px;
+    /* top: 50px; */
     color: #18332f;
     box-shadow: 0px 0px 16px -7px rgba(0, 0, 0, 1) !important;
     border-radius: 15px;
     
   }
 
-.profileContainer {
-    padding-top: 40px;
+.profileContainerBar {
+    padding-top: 26px;
     padding-left: 30px;
+   
     
 }
 
