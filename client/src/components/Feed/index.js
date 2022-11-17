@@ -75,11 +75,7 @@ const Feed = ({ posts }) => {
                               <ThreeDots />
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
-<<<<<<< HEAD
-                              <Dropdown.Item href="#/action-1"><Stack direction="horizontal">{Auth.loggedIn() && <DeletePost postId={post._id} />}Delete Post</Stack></Dropdown.Item>
-=======
                                <Dropdown.Item><Stack direction="horizontal"> <DeletePost />Delete Post</Stack></Dropdown.Item> 
->>>>>>> ee77d83167bf7740bdbf4e3eee2af715376d7794
                               <Dropdown.Item href="#/action-2"><Button type="submit" variant="warning" className="text-center"><PencilSquare/></Button>Edit Post</Dropdown.Item>
                               <Dropdown.Item href="#/action-3"><Link
                                 to={`/profile/${post.username}`}
