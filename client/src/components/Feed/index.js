@@ -1,9 +1,11 @@
 import "../Feed/feed.css";
 import React from 'react';
+// import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
-import Auth from '../../utils/auth';
+//import Auth from '../utils/auth';
 import AddPost from "../../components/AddPost";
 import DeletePost from "../../components/DeletePost";
+// import { QUERY_POSTS } from "../../utils/queries";
 import { Card, Stack, Col, Row, Dropdown, Container, Button } from 'react-bootstrap';
 import { ThreeDots, Person, PencilSquare, Eyeglasses, ChatSquareHeart, Gift, Share, CloudDownload } from 'react-bootstrap-icons';
 import Bot from '../../assets/images/bot.png'
@@ -73,7 +75,11 @@ const Feed = ({ posts }) => {
                               <ThreeDots />
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
+<<<<<<< HEAD
                               <Dropdown.Item href="#/action-1"><Stack direction="horizontal">{Auth.loggedIn() && <DeletePost postId={post._id} />}Delete Post</Stack></Dropdown.Item>
+=======
+                               <Dropdown.Item><Stack direction="horizontal"> <DeletePost />Delete Post</Stack></Dropdown.Item> 
+>>>>>>> ee77d83167bf7740bdbf4e3eee2af715376d7794
                               <Dropdown.Item href="#/action-2"><Button type="submit" variant="warning" className="text-center"><PencilSquare/></Button>Edit Post</Dropdown.Item>
                               <Dropdown.Item href="#/action-3"><Link
                                 to={`/profile/${post.username}`}
@@ -97,6 +103,7 @@ const Feed = ({ posts }) => {
                       </Card.Text>
 
 
+
                     </Card.Body>
 
                     <Card.Footer className="cardFooter">
@@ -107,7 +114,7 @@ const Feed = ({ posts }) => {
                          style={{ fontWeight: 600, textDecoration: "none", color: "inherit" }}>
                           <Stack direction="horizontal" gap={3}>
                           <div className="hover"><ChatSquareHeart width="30" height="30"/></div>
-                          <div className="hover">Comments {post.commentCount}</div>
+                          <div className="hover">Comments </div>
                           <div className="hover"><Gift width="30" height="30"/></div>
                           <div className="hover">Award</div>
                           <div className="hover"><Share width="30" height="30"/></div>
@@ -127,7 +134,7 @@ const Feed = ({ posts }) => {
               </Container>
             </Card>
           ))
-        };
+        }
       </div>
     </div>
 
